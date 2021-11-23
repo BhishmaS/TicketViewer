@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.App.CLI", "TicketViewer.App.CLI\TicketViewer.App.CLI.csproj", "{40E50B4D-12D6-4C07-9426-F0AF18A04A33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.Model", "TicketViewer.Model\TicketViewer.Model.csproj", "{53340F8C-4456-46DC-BDC5-A1D1C933421B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.Services", "TicketViewer.Services\TicketViewer.Services.csproj", "{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{40E50B4D-12D6-4C07-9426-F0AF18A04A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40E50B4D-12D6-4C07-9426-F0AF18A04A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40E50B4D-12D6-4C07-9426-F0AF18A04A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53340F8C-4456-46DC-BDC5-A1D1C933421B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53340F8C-4456-46DC-BDC5-A1D1C933421B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53340F8C-4456-46DC-BDC5-A1D1C933421B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53340F8C-4456-46DC-BDC5-A1D1C933421B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
