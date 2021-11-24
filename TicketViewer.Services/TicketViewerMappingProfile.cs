@@ -18,10 +18,18 @@ namespace TicketViewer.Services
                 .ForMember(dest => dest.AssigneeId, opt => opt.MapFrom(src => src.assignee_id))
                 .ForMember(dest => dest.Subject, opt => opt.MapFrom(src => src.subject))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.description))
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.type))
+                .ForMember(dest => dest.Priority, opt => opt.MapFrom(src => src.priority))
                 .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.tags))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.status))
                 .ForMember(dest => dest.CreatedOn, opt => opt.MapFrom(src => src.created_at))
                 .ForMember(dest => dest.UpdatedOn, opt => opt.MapFrom(src => src.updated_at));
+
+            this.CreateMap<Model.Zendesk.TicketListViewModel, TicketsPage>()
+                .ForMember(dest => dest.Tickets, opt => opt.MapFrom(src => src.tickets))
+                .ForMember(dest => dest.TotalTickets, opt => opt.MapFrom(src => src.count))
+                .ForMember(dest => dest.PreviousPage, opt => opt.MapFrom(src => src.previous_page))
+                .ForMember(dest => dest.NextPage, opt => opt.MapFrom(src => src.next_page));
         }
     }
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TicketViewer.Model
+namespace TicketViewer.App.Web.Models
 {
-    public class Ticket
+    public class TicketDetailsViewModel
     {
         public long Id { get; set; }
 
         public long RequesterId { get; set; }
 
         public long AssigneeId { get; set; }
-        
+
         public string Subject { get; set; }
 
         public string Description { get; set; }

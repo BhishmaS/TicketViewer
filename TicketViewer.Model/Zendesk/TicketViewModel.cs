@@ -15,6 +15,10 @@ namespace TicketViewer.Model.Zendesk
 
         public string description { get; set; }
 
+        public string type { get; set; }
+
+        public string priority { get; set; }
+
         public List<string> tags { get; set; }
 
         public string status { get; set; }
