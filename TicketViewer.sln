@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.Model", "Ticke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.Services", "TicketViewer.Services\TicketViewer.Services.csproj", "{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.Common", "TicketViewer.Common\TicketViewer.Common.csproj", "{915F536C-4356-4F8A-AAA0-4E72D62F438B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB01E0CA-F90A-404A-B7C9-7AB37B61508C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915F536C-4356-4F8A-AAA0-4E72D62F438B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915F536C-4356-4F8A-AAA0-4E72D62F438B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915F536C-4356-4F8A-AAA0-4E72D62F438B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915F536C-4356-4F8A-AAA0-4E72D62F438B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

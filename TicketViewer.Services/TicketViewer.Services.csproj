@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TicketViewer.Common\TicketViewer.Common.csproj" />
     <ProjectReference Include="..\TicketViewer.Model\TicketViewer.Model.csproj" />
   </ItemGroup>
 
