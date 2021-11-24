@@ -12,6 +12,7 @@ namespace TicketViewer.App.CLI
         static async Task Main(string[] args)
         {
             InitializeConfiguration(args);
+            ResolveDomains();
             InitializeZendeskAuth();
             InitializeAutoMapper();
 
@@ -28,6 +29,11 @@ namespace TicketViewer.App.CLI
                 .Build();
         }
         
+        private static void ResolveDomains()
+        {
+            DomainResolver.ResolveZendeskDomain(Configuration["ZendeskSubdomainName"]);
+        }
+
         private static void InitializeZendeskAuth()
         {
             var username = Configuration["Username"];
@@ -36,7 +42,7 @@ namespace TicketViewer.App.CLI
             AuthExtensions.BuildZendeskBasicAuthHeaders(username, password);
         }
 
-        private static  void InitializeAutoMapper()
+        private static void InitializeAutoMapper()
         {
             MapperFactory.InitializeMapper("TicketViewer.Services");
         }
