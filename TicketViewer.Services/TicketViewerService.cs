@@ -14,13 +14,14 @@ namespace TicketViewer.Services
         {
         }
 
-        public async Task<TicketsPage> GetTicketsPage(string pageUrl = "")
+        public async Task<TicketsPage> GetTicketsPage(string pageUrl = "", int pageSize = 25)
         {
             try
             {
                 // Using Offset Pagination
-                pageUrl = string.IsNullOrEmpty(pageUrl) ? Model.Zendesk.ApiUrlConstants.TicketsListAPI : pageUrl;
-                var ticketsListAPI = string.Format(pageUrl, DomainResolver.ZendeskSubdomainName);
+                var ticketsListAPI = string.IsNullOrEmpty(pageUrl)
+                    ? string.Format(Model.Zendesk.ApiUrlConstants.TicketsListAPI, DomainResolver.ZendeskSubdomainName, pageSize)
+                    : pageUrl;
 
                 var ticketsResponse = await ticketsListAPI.SendHttpRequest(HttpMethod.Get);
                 var ticketsPage = ticketsResponse.Value
@@ -38,7 +39,7 @@ namespace TicketViewer.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("Error occrued while fetching tickets", ex);
+                throw new Exception("Error occurred while fetching tickets", ex);
             }
         }
 
@@ -62,7 +63,7 @@ namespace TicketViewer.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("Error occrued while fetching ticket details", ex);
+                throw new Exception("Error occurred while fetching ticket details", ex);
             }
         }
 
@@ -85,7 +86,7 @@ namespace TicketViewer.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("Error occrued while fetching users", ex);
+                throw new Exception("Error occurred while fetching users", ex);
             }
         }
     }

@@ -6,7 +6,7 @@ namespace TicketViewer.Services
 {
     public interface ITicketViewerService
     {
-        Task<TicketsPage> GetTicketsPage(string pageUrl = "");
+        Task<TicketsPage> GetTicketsPage(string pageUrl = "", int pageSize = 25);
 
         Task<Ticket> GetTicketDetails(int ticketId);
 
