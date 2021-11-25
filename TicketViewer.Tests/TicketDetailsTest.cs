@@ -4,11 +4,11 @@ using Xunit;
 
 namespace TicketViewer.Tests
 {
-    public class TicketDetailsTests : BaseTest
+    public class TicketDetailsTest : BaseTest
     {
         private readonly TicketViewerService ticketViewerService;
 
-        public TicketDetailsTests()
+        public TicketDetailsTest()
         {
             this.ticketViewerService = new TicketViewerService();
         }
