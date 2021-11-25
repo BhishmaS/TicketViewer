@@ -6,17 +6,38 @@ namespace TicketViewer.Common
 {
     public static class AuthExtensions
     {
+        private static AuthenticationType AuthenticationType { get; set; }
+
         private static AuthenticationHeaderValue ZendeskBasicAuthHeaders { get; set; }
 
-        public static void BuildZendeskBasicAuthHeaders(string username, string password)
+        private static AuthenticationHeaderValue ZendeskBearerAuthHeaders { get; set; }
+
+        public static void BuildZendeskAuthHeaders(AuthenticationType authType, string token, string username, string password)
         {
+            AuthenticationType = authType;
+
+            //// For Token Based Auth
+            ZendeskBearerAuthHeaders = new AuthenticationHeaderValue("Bearer", token);
+
+            //// For Basic Auth
             var byteArray = Encoding.ASCII.GetBytes($"{username}:{password}");
             ZendeskBasicAuthHeaders = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
         }
 
-        public static AuthenticationHeaderValue GetZendeskBasicAuthHeaders()
+        public static AuthenticationHeaderValue GetZendeskAuthHeaders()
         {
+            if (AuthenticationType == AuthenticationType.TokenBased)
+            {
+                return ZendeskBearerAuthHeaders;
+            }
+
             return ZendeskBasicAuthHeaders;
         }
+    }
+
+    public enum AuthenticationType
+    {
+        Basic = 0,
+        TokenBased = 1,
     }
 }

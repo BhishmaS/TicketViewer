@@ -17,7 +17,7 @@ namespace TicketViewer.Common
             try
             {
                 var httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = AuthExtensions.GetZendeskBasicAuthHeaders();
+                httpClient.DefaultRequestHeaders.Authorization = AuthExtensions.GetZendeskAuthHeaders();
 
                 var content = new StringContent(payLoad, Encoding.UTF8);
                 var httpRequestMessage = new HttpRequestMessage(httpMethod, restEndpoint) { Content = content };

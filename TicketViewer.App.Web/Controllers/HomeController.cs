@@ -36,7 +36,9 @@ namespace TicketViewer.App.Web.Controllers
             {
                 Id = ticketDetails.Id,
                 RequesterId = ticketDetails.RequesterId,
+                Requester = ticketDetails.Requester,
                 AssigneeId = ticketDetails.AssigneeId,
+                Assignee = ticketDetails.Assignee,
                 Subject = ticketDetails.Subject,
                 Description = ticketDetails.Description,
                 Type = ticketDetails.Type,

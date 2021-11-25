@@ -12,6 +12,11 @@ namespace TicketViewer.Services
 
         private void RegisterTicketViewerMappings()
         {
+            this.CreateMap<Model.Zendesk.User, User>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.name))
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.email));
+
             this.CreateMap<Model.Zendesk.TicketViewModel, Ticket>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
                 .ForMember(dest => dest.RequesterId, opt => opt.MapFrom(src => src.requester_id))

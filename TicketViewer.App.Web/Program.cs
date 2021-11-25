@@ -35,10 +35,25 @@ namespace TicketViewer.App.Web
 
         private static void InitializeZendeskAuth()
         {
-            var username = Configuration["Username"];
-            var password = Configuration["Password"];
-
-            AuthExtensions.BuildZendeskBasicAuthHeaders(username, password);
+            if(Configuration["AuthenticationType"] == "TokenBased")
+            {
+                var token = Configuration["Token"];
+                AuthExtensions.BuildZendeskAuthHeaders(
+                    AuthenticationType.TokenBased,
+                    token,
+                    string.Empty,
+                    string.Empty);
+            }
+            else
+            {
+                var username = Configuration["Username"];
+                var password = Configuration["Password"];
+                AuthExtensions.BuildZendeskAuthHeaders(
+                    AuthenticationType.Basic,
+                    string.Empty,
+                    username,
+                    password);
+            }
         }
 
         private static void InitializeAutoMapper()

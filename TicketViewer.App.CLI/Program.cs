@@ -39,7 +39,7 @@ namespace TicketViewer.App.CLI
             var username = Configuration["Username"];
             var password = Configuration["Password"];
 
-            AuthExtensions.BuildZendeskBasicAuthHeaders(username, password);
+            AuthExtensions.BuildZendeskAuthHeaders(username, password);
         }
 
         private static void InitializeAutoMapper()

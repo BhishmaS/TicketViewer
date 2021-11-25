@@ -9,18 +9,23 @@
     <div>
         <div class="border p-3 d-flex justify-content-between">
             <h6 class="m-0 blockquote">@Model.Id - @Model.Subject</h6>
-            <p class="m-0 text-muted">@Model.RequesterId on @Model.CreatedOn.ToString("MMMM dd, yyyy hh:mm tt")</p>
+            <p class="m-0 text-muted">@Model.Requester.Name on @Model.CreatedOn.ToString("MMMM dd, yyyy hh:mm tt")</p>
         </div>
         <div class="border border-top-0 p-3">
             <p class="lead">@Model.Description</p>
 
             <div class="mt-5 d-flex justify-content-between">
                 <div>
+                    <p>
+                        <b>Assigned to: </b>
+                        @Model.Assignee.Name
+                        <span class="text-muted"> (@Model.Assignee.Email)</span>
+                    </p>
                     <p><b>Status: </b> @Model.Status</p>
-                    <p><b>Type: </b> @Model.Type</p>
                     <p><b>Priority: </b> @Model.Priority</p>
                 </div>
                 <div>
+                    <p><b>Type: </b> @Model.Type</p>
                     <p><b>Tags: </b> @string.Join(", ", @Model.Tags)</p>
                     <p><b>Last Updated: </b> @Model.UpdatedOn.ToString("MMMM dd, yyyy hh:mm tt")</p>
                 </div>

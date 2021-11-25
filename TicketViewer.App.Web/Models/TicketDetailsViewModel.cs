@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using TicketViewer.Model;
 
 namespace TicketViewer.App.Web.Models
 {
     public class TicketDetailsViewModel
     {
         public long Id { get; set; }
-
-        public long RequesterId { get; set; }
-
-        public long AssigneeId { get; set; }
 
         public string Subject { get; set; }
 
@@ -26,5 +23,13 @@ namespace TicketViewer.App.Web.Models
         public DateTime CreatedOn { get; set; }
 
         public DateTime UpdatedOn { get; set; }
+
+        public long RequesterId { get; set; }
+
+        public long AssigneeId { get; set; }
+
+        public User Requester { get; set; }
+
+        public User Assignee { get; set; }
     }
 }

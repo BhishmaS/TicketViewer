@@ -45,7 +45,7 @@
                         onclick="location.href='@Url.Action("TicketDetails", "Home", new { id = ticket.Id })'">
                         <td>@ticket.Id</td>
                         <td>@ticket.Subject</td>
-                        <td>@ticket.RequesterId</td>
+                        <td>@ticket.Requester.Name</td>
                         <td>@ticket.CreatedOn.ToString("MMMM dd, yyyy hh:mm tt")</td>
                         <td>@ticket.Type</td>
                     </tr>
