@@ -23,8 +23,8 @@ namespace TicketViewer.App.CLI
             {
                 Console.WriteLine("\nTicket " + (ticket.index + 1));
                 Console.WriteLine("Ticket Id: " + ticket.value.Id);
-                Console.WriteLine("Requester Id: " + ticket.value.RequesterId);
-                Console.WriteLine("Assignee Id: " + ticket.value.AssigneeId);
+                Console.WriteLine("Requester: " + ticket.value.Requester.Name);
+                Console.WriteLine("Assignee: " + ticket.value.Assignee.Name);
                 Console.WriteLine("Subject: " + ticket.value.Subject);
                 Console.WriteLine("Description: " + ticket.value.Description);
                 Console.WriteLine("Tags: " + string.Join(", ", ticket.value.Tags));

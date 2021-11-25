@@ -22,6 +22,10 @@ namespace TicketViewer.Common
                 var content = new StringContent(payLoad, Encoding.UTF8);
                 var httpRequestMessage = new HttpRequestMessage(httpMethod, restEndpoint) { Content = content };
                 var httpResponse = await httpClient.SendAsync(httpRequestMessage);
+                if (httpResponse.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new Exception(await httpResponse.Content.ReadAsStringAsync());
+                }
 
                 return new KeyValuePair<HttpStatusCode, string>(httpResponse.StatusCode, await httpResponse.Content.ReadAsStringAsync());
             }

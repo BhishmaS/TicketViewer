@@ -35,9 +35,9 @@ namespace TicketViewer.App.Web
 
         private static void InitializeZendeskAuth()
         {
-            if(Configuration["AuthenticationType"] == "TokenBased")
+            if(Configuration["ZendeskAuthType"] == "TokenBased")
             {
-                var token = Configuration["Token"];
+                var token = Configuration["ZendeskAccessToken"];
                 AuthExtensions.BuildZendeskAuthHeaders(
                     AuthenticationType.TokenBased,
                     token,
@@ -46,8 +46,8 @@ namespace TicketViewer.App.Web
             }
             else
             {
-                var username = Configuration["Username"];
-                var password = Configuration["Password"];
+                var username = Configuration["ZendeskUsername"];
+                var password = Configuration["ZendeskPassword"];
                 AuthExtensions.BuildZendeskAuthHeaders(
                     AuthenticationType.Basic,
                     string.Empty,
