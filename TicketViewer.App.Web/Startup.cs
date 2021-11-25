@@ -19,6 +19,10 @@ namespace TicketViewer.App.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            // Registering DependencyInjection for TicketViewerService.
+            services
+                .AddSingleton<Services.ITicketViewerService, Services.TicketViewerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

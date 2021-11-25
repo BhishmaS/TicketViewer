@@ -11,7 +11,7 @@ namespace TicketViewer.App.CLI
 
         public Application()
         {
-            this.TicketViewerService = new TicketViewerService(); // need to update this resolving using dependency injection
+            this.TicketViewerService = new TicketViewerService();
         }
 
         public async Task Run()

@@ -11,9 +11,9 @@ namespace TicketViewer.App.Web.Controllers
     {
         public ITicketViewerService TicketViewerService { get; set; }
 
-        public HomeController()
+        public HomeController(ITicketViewerService ticketViewerService)  // dependency injection
         {
-            this.TicketViewerService = new TicketViewerService(); // need to update this resolving using dependency injection
+            this.TicketViewerService = ticketViewerService;
         }
 
         public async Task<IActionResult> Index(string pageUrl = "")
