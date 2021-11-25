@@ -43,23 +43,28 @@ namespace TicketViewer.Services
             }
         }
 
-        public async Task<Ticket> GetTicketDetails(int ticketId)
+        public async Task<Ticket> GetTicketDetails(long ticketId)
         {
             try
             {
-                var ticketsDetailsAPI = string.Format(Model.Zendesk.ApiUrlConstants.TicketDetailsAPI, 
-                                            DomainResolver.ZendeskSubdomainName, 
-                                            ticketId);
+                if (ticketId > 0)
+                {
+                    var ticketsDetailsAPI = string.Format(Model.Zendesk.ApiUrlConstants.TicketDetailsAPI, 
+                                                DomainResolver.ZendeskSubdomainName, 
+                                                ticketId);
 
-                var ticketResponse = await ticketsDetailsAPI.SendHttpRequest(HttpMethod.Get);
-                var ticket = ticketResponse.Value
-                                    .FromJson<Model.Zendesk.TicketDetailsViewModel>()
-                                    .ticket
-                                    .MapTo<Ticket>();
+                    var ticketResponse = await ticketsDetailsAPI.SendHttpRequest(HttpMethod.Get);
+                    var ticket = ticketResponse.Value
+                                        .FromJson<Model.Zendesk.TicketDetailsViewModel>()
+                                        .ticket
+                                        .MapTo<Ticket>();
 
-                ticket.TicketUsers = await this.GetUsers(ticket.TicketUserIds);
+                    ticket.TicketUsers = await this.GetUsers(ticket.TicketUserIds);
 
-                return ticket;
+                    return ticket;
+                }
+
+                return null;
             }
             catch (Exception ex)
             {
@@ -71,18 +76,23 @@ namespace TicketViewer.Services
         {
             try
             {
-                var usersAPI = string.Format(Model.Zendesk.ApiUrlConstants.UsersAPI,
-                                    DomainResolver.ZendeskSubdomainName,
-                                    string.Join(",", userIds));
+                if (userIds.Count > 0)
+                {
+                    var usersAPI = string.Format(Model.Zendesk.ApiUrlConstants.UsersAPI,
+                                        DomainResolver.ZendeskSubdomainName,
+                                        string.Join(",", userIds));
 
-                var usersResponse = await usersAPI.SendHttpRequest(HttpMethod.Get);
-                var users = usersResponse.Value
-                                    .FromJson<Model.Zendesk.UsersListViewModel>()
-                                    .users
-                                    .MapCollectionTo<Model.Zendesk.User, User>()
-                                    .ToList();
+                    var usersResponse = await usersAPI.SendHttpRequest(HttpMethod.Get);
+                    var users = usersResponse.Value
+                                        .FromJson<Model.Zendesk.UsersListViewModel>()
+                                        .users
+                                        .MapCollectionTo<Model.Zendesk.User, User>()
+                                        .ToList();
 
-                return users;
+                    return users;
+                }
+
+                return null;
             }
             catch (Exception ex)
             {

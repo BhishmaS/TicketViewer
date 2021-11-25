@@ -8,7 +8,7 @@ namespace TicketViewer.Services
     {
         Task<TicketsPage> GetTicketsPage(string pageUrl = "", int pageSize = 25);
 
-        Task<Ticket> GetTicketDetails(int ticketId);
+        Task<Ticket> GetTicketDetails(long ticketId);
 
         Task<List<User>> GetUsers(List<long> userIds);
     }

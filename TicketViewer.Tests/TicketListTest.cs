@@ -42,7 +42,7 @@ namespace TicketViewer.Tests
         [Fact]
         public async Task TestListPageSize_Negative()
         {
-            Func<Task> ticketsListFunc = () => this.ticketViewerService.GetTicketsPage(string.Empty, 0);
+            Func<Task> ticketsListFunc = () => this.ticketViewerService.GetTicketsPage(string.Empty, -25);
 
             var exception = await Assert.ThrowsAsync<Exception>(ticketsListFunc);
             Assert.Equal("Error occurred while fetching tickets", exception.Message);

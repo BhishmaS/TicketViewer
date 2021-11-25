@@ -30,7 +30,7 @@ namespace TicketViewer.App.Web.Controllers
             return View(ticketsPageView);
         }
 
-        public async Task<IActionResult> TicketDetails(int id)
+        public async Task<IActionResult> TicketDetails(long id)
         {
             var ticketDetails = await this.TicketViewerService.GetTicketDetails(id);
             var ticketDetailsView = new TicketDetailsViewModel()
