@@ -57,18 +57,18 @@
         </table>
 
         <div class="mt-3">
-            @if(!string.IsNullOrEmpty(Model.PreviousPage))
+            @if (!string.IsNullOrEmpty(Model.PreviousPage))
             {
-                <input type = "button"
-                       value = "Previous Page"
-                       onclick = "location.href='@Url.Action("Index", "Home", new { pageUrl = Model.PreviousPage })'" />
+                <input type="button"
+                       value="Previous Page"
+                       onclick="location.href='@Url.Action("Index", "Home", new { pageUrl = Model.PreviousPage })'" />
             }
 
-            @if(!string.IsNullOrEmpty(Model.NextPage))
+            @if (!string.IsNullOrEmpty(Model.NextPage))
             {
-                <input type = "button"
-                       value = "Next Page"
-                       onclick = "location.href='@Url.Action("Index", "Home", new { pageUrl = Model.NextPage })'" />
+                <input type="button"
+                       value="Next Page"
+                       onclick="location.href='@Url.Action("Index", "Home", new { pageUrl = Model.NextPage })'" />
             }
         </div>
     }
