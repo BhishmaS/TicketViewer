@@ -34,7 +34,7 @@ For Mac: https://visualstudio.microsoft.com/vs/mac/
 
 - **Clone the Repo:** https://github.com/BhishmaS/TicketViewer.git
 
-- **Now Open the Solution TicketViewer.sln using visual studio from the root directory of the project.**  
+- Now Open the Solution **TicketViewer.sln** using visual studio from the root directory of the project.  
 <img src="images/solution-open.jpeg" width="400"> 
 
 - All the required project nugut dependencies will be automatically restored or else you can restore as shown below.  
@@ -42,12 +42,12 @@ For Mac: https://visualstudio.microsoft.com/vs/mac/
 
 ## Running the application
 
-- By default web app will be startup if not, update that as shown below:  
-<img src="images/project-startup.jpg" width="350" height="250"> 
+- By default web app will be startup a project if not, update that as shown below:  
+<img src="images/project-startup.jpg" width="400" height="250"> 
 
 - **Authentication:**  
 Both "TokenBased" & "Basic" authentication are supported.
-Go To: "appsettings.json" in "TicketViewer.App.Web"
+Go To: **appsettings.json** in **TicketViewer.App.Web**
 
     ```JSON
     {
@@ -65,7 +65,7 @@ Go To: "appsettings.json" in "TicketViewer.App.Web"
     - If is you want Basic Authentication, change "ZendeskAuthType" value to "Basic".  
     Provide "username" and "password" values for "ZendeskUsername", "ZendeskPassword" in the above JSON file.  
     
-    <img src="images/app-settings.jpg" width="200"> 
+<img src="images/app-settings.jpg" width="200"> 
   
 - **Run the application**  
 <img src="images/app-run.jpeg" width="500"> 
@@ -90,9 +90,15 @@ each class library explain
 ## Unit Tests
 
 Used xUnit.net for unit tests
-To run unit tests go to **TestExplorer** in Visual Studio and run them from that window.
 
-<img src="images/tests-explorer.jpg" width="350">
+- ### Authentication Setup:  
+    Same as for the application, go to **appsettings.json** in **TicketViewer.Tests** and update the auth values.
 
-### Tests Run
-<img src="images/unit-tests.jpg" width="350">
+    <img src="images/tets-app-settings.jpg" width="350">
+
+- To run unit tests go to **TestExplorer** in Visual Studio and run them from that window.
+
+    <img src="images/tests-explorer.jpg" width="350">
+
+- ### Tests Run
+    <img src="images/unit-tests.jpg" width="350">
