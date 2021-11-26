@@ -12,7 +12,7 @@ namespace TicketViewer.Common
 
         private static AuthenticationHeaderValue ZendeskBearerAuthHeaders { get; set; }
 
-        public static void BuildZendeskAuthHeaders(AuthenticationType authType, string token, string username, string password)
+        public static void BuildZendeskAuthHeaders(AuthenticationType authType, string token, string email, string password)
         {
             AuthenticationType = authType;
 
@@ -20,7 +20,7 @@ namespace TicketViewer.Common
             ZendeskBearerAuthHeaders = new AuthenticationHeaderValue("Bearer", token);
 
             //// For Basic Auth
-            var byteArray = Encoding.ASCII.GetBytes($"{username}:{password}");
+            var byteArray = Encoding.ASCII.GetBytes($"{email}:{password}");
             ZendeskBasicAuthHeaders = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
         }
 

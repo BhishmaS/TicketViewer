@@ -43,12 +43,12 @@ namespace TicketViewer.Tests
             }
             else
             {
-                var username = this._configuration["ZendeskUsername"];
+                var email = this._configuration["ZendeskEmail"];
                 var password = this._configuration["ZendeskPassword"];
                 AuthExtensions.BuildZendeskAuthHeaders(
                     AuthenticationType.Basic,
                     string.Empty,
-                    username,
+                    email,
                     password);
             }
         }

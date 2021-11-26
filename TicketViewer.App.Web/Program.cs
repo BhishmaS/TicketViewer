@@ -46,12 +46,12 @@ namespace TicketViewer.App.Web
             }
             else
             {
-                var username = Configuration["ZendeskUsername"];
+                var email = Configuration["ZendeskEmail"];
                 var password = Configuration["ZendeskPassword"];
                 AuthExtensions.BuildZendeskAuthHeaders(
                     AuthenticationType.Basic,
                     string.Empty,
-                    username,
+                    email,
                     password);
             }
         }

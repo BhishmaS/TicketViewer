@@ -54,8 +54,8 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
         "ZendeskSubdomainName": "zccbsportive.zendesk.com",
         "ZendeskAuthType": "TokenBased", // Values: "Basic", "TokenBased"
         "ZendeskAccessToken": "__ZendeskAccessToken__",
-        // Provide either access token or username & password based on the provided AuthType
-        "ZendeskUsername": "__ZendeskUsername__",
+        // Provide either access token or email & password based on the provided AuthType
+        "ZendeskEmail": "__ZendeskEmail__",
         "ZendeskPassword": "__ZendeskPassword__",
         "AllowedHosts": "*"
     }
@@ -66,7 +66,7 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
     Provide **access token** value for **ZendeskAccessToken** in the above JSON file.
     
     - If is you want Basic Authentication, change **ZendeskAuthType** value to **Basic**.  
-    Provide "username" and "password" values for **ZendeskUsername**, **ZendeskPassword** in the above JSON file.  
+    Provide "email" and "password" values for **ZendeskEmail**, **ZendeskPassword** in the above JSON file.  
     
     <img src="images/app-settings.jpg" width="200"> 
   
