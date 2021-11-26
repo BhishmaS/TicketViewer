@@ -44,8 +44,8 @@ Open after installing the visual studio
 
 ### Running the application
 
-- By default web app be startup, if not update that as shown below:
+- By default web app will be startup if not, update that as shown below:  
 ![Solution Open](images/project-startup.jpg)
 
-- Run the application
+- Run the application  
 ![Solution Open](images/app-run.jpeg)
