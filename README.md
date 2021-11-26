@@ -81,11 +81,11 @@ each class library explain
 
 ## Ticket List
 
-    <img src="images/ticket-list.jpg">
+<img src="images/ticket-list.jpg">
 
 ## Ticket Details
 
-    <img src="images/ticket-details.jpg">
+<img src="images/ticket-details.jpg">
 
 ## Unit Tests
 
