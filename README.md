@@ -45,7 +45,7 @@ For Mac: https://visualstudio.microsoft.com/vs/mac/
 - By default web app will be startup a project if not, update that as shown below:  
     <img src="images/project-startup.jpg" width="400" height="250"> 
 
-- **Authentication:**  
+- **Zendesk Authentication:**  
 Both "TokenBased" & "Basic" authentication are supported.  
 Go To: **appsettings.json** in **TicketViewer.App.Web**
 
@@ -110,7 +110,7 @@ Unit tests library which runs all the application specific test cases
 
 Used xUnit.net for unit tests
 
-- ### Authentication Setup:  
+- ### Zendesk Authentication Setup:  
     Same as for the application, go to **appsettings.json** in **TicketViewer.Tests** and update the auth values.
 
     <img src="images/tets-app-settings.jpg" width="350">
