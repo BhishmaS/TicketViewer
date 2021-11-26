@@ -23,10 +23,7 @@ Is Application Setup using .NET a complex process?
 For Windows (Visual Studio Community Version): https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=17  
 For Mac: https://visualstudio.microsoft.com/vs/mac/  
 **Installation:**  
-<img src="images/dot-net-installation.jpeg" width="400">
-
-
-Open after installing the visual studio
+<img src="images/dot-net-installation.jpeg" width="500">
 
 - **Download & Install .NET 5 SDK based on your OS**  
 .NET 5 SDK: https://dotnet.microsoft.com/download/dotnet/5.0  
@@ -41,7 +38,7 @@ Open after installing the visual studio
 <img src="images/solution-open.jpeg" width="400"> 
 
 - All the required project nugut dependencies will be automatically restored or else you can restore as shown below.  
-<img src="images/nuget-restore.jpeg" width="350"> 
+<img src="images/nuget-restore.jpeg" width="400"> 
 
 ### Running the application
 
@@ -49,4 +46,4 @@ Open after installing the visual studio
 <img src="images/project-startup.jpg" width="350" height="250"> 
 
 - Run the application  
-<img src="images/app-run.jpeg" width="400"> 
+<img src="images/app-run.jpeg" width="500"> 
