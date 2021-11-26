@@ -51,12 +51,13 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
 
     ```JSON
     {
-    "ZendeskSubdomainName": "zccbsportive.zendesk.com",
-    "ZendeskAuthType": "TokenBased", // Values: "Basic", "TokenBased"
-    "ZendeskAccessToken": "__ZendeskAccessToken__",
-    "ZendeskUsername": "__ZendeskUsername__",
-    "ZendeskPassword": "__ZendeskPassword__",
-    "AllowedHosts": "*"
+        "ZendeskSubdomainName": "zccbsportive.zendesk.com",
+        "ZendeskAuthType": "TokenBased", // Values: "Basic", "TokenBased"
+        "ZendeskAccessToken": "__ZendeskAccessToken__",
+        // Provide either access token or username & password based on the provided AuthType
+        "ZendeskUsername": "__ZendeskUsername__",
+        "ZendeskPassword": "__ZendeskPassword__",
+        "AllowedHosts": "*"
     }
     ```
     - By default authentication type is "TokenBased".  
@@ -72,19 +73,26 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
 
 ## Application Design
 
+### Application Libraries 
+**TicketViewer.Common:**  
+Contains all core common extensions and functionalities of the application
+
+**TicketViewer.Model:**  
+Contains all the application specific and zendesk api models
+
+**TicketViewer.Services:**  
+Contains all application specific services, including connecting to zendesk API
+
+**TicketViewer.App.Web:**  
+Web application which uses all the app libraries and displays the pages
+
+**TicketViewer.App.CLI:**  
+Command line application which uses all the app libraries and displays the console output
+
+**TicketViewer.Tests:**  
+Unit tests library which runs all the application specific test cases
+
 <img src="images/project-design-architecture.png"> 
-
-**TicketViewer.Common**  
-
-**TicketViewer.Model**  
-
-**TicketViewer.Services**  
-
-**TicketViewer.App.Web**  
-
-**TicketViewer.App.CLI**  
-
-**TicketViewer.Tests**  
 
 - Created both browser based(**TicketViewer.App.Web**) and command line(**TicketViewer.App.CLI**) applications but using only **TicketViewer.App.Web**, so remove CLI application from the solution.
 
