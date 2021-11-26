@@ -46,7 +46,7 @@ For Mac: https://visualstudio.microsoft.com/vs/mac/
     <img src="images/project-startup.jpg" width="400" height="250"> 
 
 - **Authentication:**  
-Both "TokenBased" & "Basic" authentication are supported.
+Both "TokenBased" & "Basic" authentication are supported.  
 Go To: **appsettings.json** in **TicketViewer.App.Web**
 
     ```JSON
@@ -71,13 +71,24 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
     <img src="images/app-run.jpeg" width="500"> 
 
 ## Application Design
-class diagrams
 
-not using CLI so removed from the solution
+<img src="images/project-design-architecture.png"> 
 
-can even integrate with mobile app by simple createing enw mobile and using these stand alone class libraries
+**TicketViewer.Common**  
 
-each class library explain
+**TicketViewer.Model**  
+
+**TicketViewer.Services**  
+
+**TicketViewer.App.Web**  
+
+**TicketViewer.App.CLI**  
+
+**TicketViewer.Tests**  
+
+- Created both browser based(**TicketViewer.App.Web**) and command line(**TicketViewer.App.CLI**) applications but using only **TicketViewer.App.Web**, so remove CLI application from the solution.
+
+- We can even integrate this solution with Mobile App by simply creating new mobile API project and using these stand alone class libraries in it.
 
 ## Ticket List
 
