@@ -40,10 +40,59 @@ For Mac: https://visualstudio.microsoft.com/vs/mac/
 - All the required project nugut dependencies will be automatically restored or else you can restore as shown below.  
 <img src="images/nuget-restore.jpeg" width="400"> 
 
-### Running the application
+## Running the application
 
 - By default web app will be startup if not, update that as shown below:  
 <img src="images/project-startup.jpg" width="350" height="250"> 
 
-- Run the application  
+- **Authentication:**  
+Both "TokenBased" & "Basic" authentication are supported.
+Go To: "appsettings.json" in "TicketViewer.App.Web"
+
+    ```JSON
+    {
+    "ZendeskSubdomainName": "zccbsportive.zendesk.com",
+    "ZendeskAuthType": "TokenBased", // Values: "Basic", "TokenBased"
+    "ZendeskAccessToken": "__ZendeskAccessToken__",
+    "ZendeskUsername": "__ZendeskUsername__",
+    "ZendeskPassword": "__ZendeskPassword__",
+    "AllowedHosts": "*"
+    }
+    ```
+    - By default authentication type is "TokenBased".  
+    Provide "access token" value for "ZendeskAccessToken" in the above JSON file.
+    
+    - If is you want Basic Authentication, change "ZendeskAuthType" value to "Basic".  
+    Provide "username" and "password" values for "ZendeskUsername", "ZendeskPassword" in the above JSON file.  
+    
+    <img src="images/app-settings.jpg" width="200"> 
+  
+- **Run the application**  
 <img src="images/app-run.jpeg" width="500"> 
+
+## Application Design
+class diagrams
+
+not using CLI so removed from the solution
+
+can even integrate with mobile app by simple createing enw mobile and using these stand alone class libraries
+
+each class library explain
+
+## Ticket List
+
+<img src="images/ticket-list.jpg">
+
+## Ticket Details
+
+<img src="images/ticket-details.jpg">
+
+## Unit Tests
+
+Used xUnit.net for unit tests
+To run unit tests go to **TestExplorer** in Visual Studio and run them from that window.
+
+<img src="images/tests-explorer.jpg" width="350">
+
+### Tests Run
+<img src="images/unit-tests.jpg" width="350">
