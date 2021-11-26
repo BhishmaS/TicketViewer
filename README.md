@@ -43,7 +43,7 @@ For Mac: https://visualstudio.microsoft.com/vs/mac/
 ## Running the application
 
 - By default web app will be startup a project if not, update that as shown below:  
-<img src="images/project-startup.jpg" width="400" height="250"> 
+    <img src="images/project-startup.jpg" width="400" height="250"> 
 
 - **Authentication:**  
 Both "TokenBased" & "Basic" authentication are supported.
@@ -65,10 +65,10 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
     - If is you want Basic Authentication, change "ZendeskAuthType" value to "Basic".  
     Provide "username" and "password" values for "ZendeskUsername", "ZendeskPassword" in the above JSON file.  
     
-<img src="images/app-settings.jpg" width="200"> 
+    <img src="images/app-settings.jpg" width="200"> 
   
 - **Run the application**  
-<img src="images/app-run.jpeg" width="500"> 
+    <img src="images/app-run.jpeg" width="500"> 
 
 ## Application Design
 class diagrams
@@ -81,11 +81,11 @@ each class library explain
 
 ## Ticket List
 
-<img src="images/ticket-list.jpg">
+    <img src="images/ticket-list.jpg">
 
 ## Ticket Details
 
-<img src="images/ticket-details.jpg">
+    <img src="images/ticket-details.jpg">
 
 ## Unit Tests
 
