@@ -9,7 +9,10 @@
     {
         <div class="d-flex">
             <p><strong>Total: </strong> <code>@Model.TotalTickets Tickets</code></p>
-            <p class="ml-3"><strong>Showing: </strong> <code>@Model.Tickets.Count Tickets</code></p>
+            <p class="ml-3">
+                <strong>Showing: </strong> 
+                <code>@Model.Tickets.Min(t => t.Id) - @Model.Tickets.Max(t => t.Id) Tickets</code>
+            </p>
         </div>
 
         <div>
