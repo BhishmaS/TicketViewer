@@ -60,11 +60,13 @@ Go To: **appsettings.json** in **TicketViewer.App.Web**
         "AllowedHosts": "*"
     }
     ```
-    - By default authentication type is "TokenBased".  
-    Provide "access token" value for "ZendeskAccessToken" in the above JSON file.
+    - Update the **ZendeskSubdomainName** value, with your desired domain.
+
+    - By default authentication type is **TokenBased**.  
+    Provide **access token** value for **ZendeskAccessToken** in the above JSON file.
     
-    - If is you want Basic Authentication, change "ZendeskAuthType" value to "Basic".  
-    Provide "username" and "password" values for "ZendeskUsername", "ZendeskPassword" in the above JSON file.  
+    - If is you want Basic Authentication, change **ZendeskAuthType** value to **Basic**.  
+    Provide "username" and "password" values for **ZendeskUsername**, **ZendeskPassword** in the above JSON file.  
     
     <img src="images/app-settings.jpg" width="200"> 
   
@@ -105,6 +107,10 @@ Unit tests library which runs all the application specific test cases
 ## Ticket Details
 
 <img src="images/ticket-details.jpg">
+
+## Application Error Page
+
+<img src="images/error-message.jpg">
 
 ## Unit Tests
 
