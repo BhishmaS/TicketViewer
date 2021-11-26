@@ -23,29 +23,30 @@ Is Application Setup using .NET a complex process?
 For Windows (Visual Studio Community Version): https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=17  
 For Mac: https://visualstudio.microsoft.com/vs/mac/  
 **Installation:**  
-![Dot Net Installation](images/dot-net-installation.jpeg)
+<img src="images/dot-net-installation.jpeg" width="400">
+
 
 Open after installing the visual studio
 
 - **Download & Install .NET 5 SDK based on your OS**  
 .NET 5 SDK: https://dotnet.microsoft.com/download/dotnet/5.0  
 **Installation:**  
-![Dot Net 5 Sdk](images/dot-net5-sdk.jpeg)
+<img src="images/dot-net5-sdk.jpeg" width="400">
 
 - Visual studio install guide for reference: https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022
 
 - **Clone the Repo:** https://github.com/BhishmaS/TicketViewer.git
 
 - **Now Open the Solution TicketViewer.sln using visual studio from the root directory of the project.**  
-![Solution Open](images/solution-open.jpeg)
+<img src="images/solution-open.jpeg" width="400"> 
 
-- All the required project nugut dependencies will be automatically restored or else you can restore as shown below.
-![Solution Open](images/nuget-restore.jpeg)
+- All the required project nugut dependencies will be automatically restored or else you can restore as shown below.  
+<img src="images/nuget-restore.jpeg" width="350"> 
 
 ### Running the application
 
 - By default web app will be startup if not, update that as shown below:  
-![Solution Open](images/project-startup.jpg)
+<img src="images/project-startup.jpg" width="350" height="250"> 
 
 - Run the application  
-![Solution Open](images/app-run.jpeg)
+<img src="images/app-run.jpeg" width="400"> 
