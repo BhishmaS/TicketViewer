@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TicketViewer.Common\TicketViewer.Common.csproj" />
     <ProjectReference Include="..\TicketViewer.Model\TicketViewer.Model.csproj" />
   </ItemGroup>

@@ -23,6 +23,9 @@ namespace TicketViewer.Services
                     ? string.Format(Model.Zendesk.ApiUrlConstants.TicketsListAPI, DomainResolver.ZendeskSubdomainName, pageSize)
                     : pageUrl;
 
+                //// static code.. need to be in separate service 
+                //// for example: used for unit tests where this static api calls should not be triggred
+                //// need to pass mock data service over there
                 var ticketsResponse = await ticketsListAPI.SendHttpRequest(HttpMethod.Get);
                 var ticketsPage = ticketsResponse.Value
                                         .FromJson<Model.Zendesk.TicketListViewModel>()

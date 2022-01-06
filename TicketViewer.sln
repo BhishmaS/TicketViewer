@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketViewer.Services", "Ti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketViewer.Common", "TicketViewer.Common\TicketViewer.Common.csproj", "{915F536C-4356-4F8A-AAA0-4E72D62F438B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.App.Web", "TicketViewer.App.Web\TicketViewer.App.Web.csproj", "{FEA71CA9-E3D7-4B00-95AD-830419925116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketViewer.App.Web", "TicketViewer.App.Web\TicketViewer.App.Web.csproj", "{FEA71CA9-E3D7-4B00-95AD-830419925116}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketViewer.Tests", "TicketViewer.Tests\TicketViewer.Tests.csproj", "{2D3B2B81-CCBF-4464-96A7-342BBA06C24D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketViewer.Tests", "TicketViewer.Tests\TicketViewer.Tests.csproj", "{2D3B2B81-CCBF-4464-96A7-342BBA06C24D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketViewer.App.CLI", "TicketViewer.App.CLI\TicketViewer.App.CLI.csproj", "{D4505A88-C5B9-4370-B752-07E321FC049E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2D3B2B81-CCBF-4464-96A7-342BBA06C24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D3B2B81-CCBF-4464-96A7-342BBA06C24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D3B2B81-CCBF-4464-96A7-342BBA06C24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4505A88-C5B9-4370-B752-07E321FC049E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4505A88-C5B9-4370-B752-07E321FC049E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4505A88-C5B9-4370-B752-07E321FC049E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4505A88-C5B9-4370-B752-07E321FC049E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
